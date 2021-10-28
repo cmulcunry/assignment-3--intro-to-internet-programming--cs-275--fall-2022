@@ -5,6 +5,12 @@ body {
   justify-content: center;
 }
 
+td {
+  border: 3px lightcoral dashed;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
 table {
   max-height: 2em;
   margin: auto;
