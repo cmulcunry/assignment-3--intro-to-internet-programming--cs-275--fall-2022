@@ -1,0 +1,60 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(#e66465, #9198e5);
+  color: #ffe8eb;
+  font-size: 3rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column wrap;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+}
+
+table {
+  background-color: #292325;
+  border-collapse: collapse;
+  box-shadow: -5px -5px 1px #9941bf, 5px 5px 1px #5a256e;
+}
+
+table td {
+  border: 5px solid #ca758f;
+}
+
+td {
+  user-select: none;
+  cursor: pointer;
+  padding: 30px;
+}
+
+.initial {
+  transition: all .5s ease-in-out;
+  transform: rotate(0deg);
+}
+
+td:nth-child(1).flipped {
+  color: #9fbdfc;
+}
+
+td:nth-child(2).flipped {
+  color: #aa9ffc;
+}
+
+td:nth-child(3).flipped {
+  color: #db9ffc;
+}
+
+td:nth-child(4).flipped {
+  color: #fc9fe5;
+}
+
+.flipped {
+  transition: all .5s ease-in-out;
+  transform: rotate(180deg);
+}
