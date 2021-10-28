@@ -1,4 +1,4 @@
-window.onload = () => {
+let window.onload = () => {
     const tdList = document.getElementsByTagName(`td`);
     for (const cell of tdList) {
         cell.addEventListener(`click`, function() {
