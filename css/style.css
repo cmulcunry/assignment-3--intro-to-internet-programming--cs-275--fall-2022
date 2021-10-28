@@ -1,0 +1,12 @@
+td,
+th {
+  border: 3px solid #000;
+  text-align: left;
+  padding: 8px;
+}
+
+body {
+  justify-content: center;
+  font-family: arial, sans-serif;
+  align-items: center;
+}
