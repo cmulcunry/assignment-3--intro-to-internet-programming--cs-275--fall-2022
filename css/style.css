@@ -12,6 +12,7 @@ body {
 td {
   border: 3px lightcoral dashed;
   transition-duration: .5s;
+  user-select: none;
   font-size: 2rem;
   padding: 2rem;
 }
