@@ -4,3 +4,8 @@ body {
   height: 100vh;
   justify-content: center;
 }
+
+table {
+  max-height: 2em;
+  margin: auto;
+}
