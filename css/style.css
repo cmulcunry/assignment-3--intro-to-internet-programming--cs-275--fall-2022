@@ -5,4 +5,10 @@ body {
 table {
   border: solid;
   border-color: red;
+  border-collapse: collapse;
+}
+
+tbody td:nth-child(1) {
+  border: solid;
+  border-color: red;
 }
