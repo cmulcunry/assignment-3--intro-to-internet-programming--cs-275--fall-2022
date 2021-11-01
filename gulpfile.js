@@ -119,7 +119,7 @@ let serve = () => {
         server: {
             baseDir: [
                 `temp`,
-                `html`
+                `./`
             ]
         }
     });
@@ -130,7 +130,7 @@ let serve = () => {
     watch(`css/style.css`, compileCSSForDev)
         .on(`change`, reload);
 
-    watch(`html/*.html`, validateHTML)
+    watch(`*.html`, validateHTML)
         .on(`change`, reload);
 };
 
