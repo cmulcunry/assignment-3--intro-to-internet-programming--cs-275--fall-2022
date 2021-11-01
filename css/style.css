@@ -1,3 +1,8 @@
 body {
   font-size: 64px;
 }
+
+table {
+  border: solid;
+  border-color: red;
+}
