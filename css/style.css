@@ -3,14 +3,22 @@
     --tablecolor: rgb(255, 100, 100);
     --bgcolor: rgb(0, 0, 0);
     --textcolor: rgb(255, 255, 255);
+    --cellAColor: rgb(255, 162, 162);
+    --cellBColor: rgb(217, 255, 112);
+    --cellCColor: rgb(100, 115, 255);
+    --cellDColor: rgb(0, 158, 105);
   }
 }
 
 @media (prefers-color-scheme: light) {
   body {
-    --tablecolor: rgb(255, 0, 0);
+    --tablecolor: rgb(156, 0, 0);
     --bgcolor: rgb(255, 255, 255);
     --textcolor: rgb(0, 0, 0);
+    --cellAColor: rgb(255, 2, 2);
+    --cellBColor: rgb(187, 255, 0);
+    --cellCColor: rgb(0, 26, 255);
+    --cellDColor: rgb(0, 216, 144);
   }
 }
 
@@ -28,7 +36,7 @@ table {
 
 td,
 th {
-  border: 3px solid  var(--tablecolor);
+  border: 5px solid  var(--tablecolor);
   text-align: center;
   height: 100px;
   width: 100px;
@@ -47,17 +55,17 @@ body {
 }
 
 td:nth-child(1):hover {
-  background-color: #ffd413c6;
+  background-color: var(--cellAColor);
 }
 
 td:nth-child(2):hover {
-  background-color: #bdff3ac6;
+  background-color: var(--cellBColor);
 }
 
 td:nth-child(3):hover {
-  background-color: #00bb25aa;
+  background-color: var(--cellCColor);
 }
 
 td:nth-child(4):hover {
-  background-color: #3aceff8e;
+  background-color: var(--cellDColor);
 }

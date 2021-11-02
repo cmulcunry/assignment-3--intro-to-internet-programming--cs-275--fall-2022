@@ -1,4 +1,6 @@
 window.onload = () => {
+    const body = document.body;
+    var style = getComputedStyle(document.body)
     let tableCellA = document.querySelectorAll(`td`)[0];
     let tableCellB = document.querySelectorAll(`td`)[1];
     let tableCellC = document.querySelectorAll(`td`)[2];
@@ -12,6 +14,7 @@ window.onload = () => {
         tableCellA.style.transition = `transform .5s`;
         tableCellA.style.transform = `rotate(180deg)`;
         cellAFlipped = true;
+        body.style.background = style.getPropertyValue('--cellAColor');
     };
 
     let flipCellB = () => {
@@ -19,12 +22,14 @@ window.onload = () => {
 
         tableCellB.style.transition = `transform .5s`;
         tableCellB.style.transform = `rotate(180deg)`;
+        body.style.background = style.getPropertyValue('--cellBColor');
     };
 
     let flipCellC = () => {
         reset();
         tableCellC.style.transition = `transform .5s`;
         tableCellC.style.transform = `rotate(180deg)`;
+        body.style.background = style.getPropertyValue('--cellCColor');
     };
 
     let flipCellD = () => {
@@ -33,6 +38,7 @@ window.onload = () => {
 
         tableCellD.style.transition = `transform .5s`;
         tableCellD.style.transform = `rotate(180deg)`;
+        body.style.background = style.getPropertyValue('--cellDColor');
     };
 
     function reset() {
