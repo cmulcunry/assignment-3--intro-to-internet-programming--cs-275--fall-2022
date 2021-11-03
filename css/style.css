@@ -42,6 +42,9 @@ th {
   width: 100px;
   color: var(--textcolor);
   font-size: 50px;
+  -o-transition:color .2s ease-in;
+  -webkit-transition:all .2s ease-in;
+  transition: all .2s ease-in; 
 }
 
 body {
