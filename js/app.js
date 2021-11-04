@@ -97,4 +97,6 @@ window.onload = () => {
     tableCellB.addEventListener(`click`, flipCellB);
     tableCellC.addEventListener(`click`, flipCellC);
     tableCellD.addEventListener(`click`, flipCellD);
+
+    
 };
