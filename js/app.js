@@ -5,6 +5,8 @@ let angle = 0;
 
 letters.forEach(letter => {
     letter.addEventListener(`click`, () => {
+        angle = 0;
+        clearInterval(rotationTimer);
         if(flippedLetter !== letter) {
             //letter.style.transform = `rotate(180deg)`;
             letter.style.color = `blue`;
