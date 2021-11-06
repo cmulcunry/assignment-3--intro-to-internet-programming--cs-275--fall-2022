@@ -2,6 +2,7 @@ let letters = document.querySelectorAll(`td`);
 
 letters.forEach(letter => {
     letter.addEventListener(`click`, () => {
-        alert(`hello`);
+        letter.style.transform = `rotate(180deg)`;
+        letter.style.color = `blue`;
     });
 });
