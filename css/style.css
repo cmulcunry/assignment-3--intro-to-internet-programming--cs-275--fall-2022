@@ -1,27 +1,3 @@
-@media (prefers-color-scheme: dark) {
-  body {
-    --tablecolor: rgb(255, 100, 100);
-    --bgcolor: rgb(0, 0, 0);
-    --textcolor: rgb(255, 255, 255);
-    --cellAColor: rgb(255, 162, 162);
-    --cellBColor: rgb(217, 255, 112);
-    --cellCColor: rgb(100, 115, 255);
-    --cellDColor: rgb(0, 158, 105);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    --tablecolor: rgb(156, 0, 0);
-    --bgcolor: rgb(255, 255, 255);
-    --textcolor: rgb(0, 0, 0);
-    --cellAColor: rgb(255, 2, 2);
-    --cellBColor: rgb(187, 255, 0);
-    --cellCColor: rgb(0, 26, 255);
-    --cellDColor: rgb(0, 216, 144);
-  }
-}
-
 body {
   background-color: var(--bgcolor);
 }
@@ -42,9 +18,9 @@ th {
   width: 100px;
   color: var(--textcolor);
   font-size: 50px;
-  -o-transition:color .2s ease-in;
-  -webkit-transition:all .2s ease-in;
-  transition: all .2s ease-in; 
+  -o-transition: color .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
 
 body {

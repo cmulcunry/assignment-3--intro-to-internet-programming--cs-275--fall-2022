@@ -11,8 +11,9 @@ window.onload = () => {
     let cellCFlipped = false;
     let cellDFlipped = false;
 
+    let cells = [tableCellA, tableCellB, tableCellC, tableCellD];
+
     let flipCellA = () => {
-        console.log(cellAFlipped);
         if (cellAFlipped == true) {
             reset();
         } else {
@@ -26,7 +27,6 @@ window.onload = () => {
     };
 
     let flipCellB = () => {
-        console.log(cellBFlipped);
         if (cellBFlipped == true) {
             reset();
         } else {
@@ -40,7 +40,6 @@ window.onload = () => {
     };
 
     let flipCellC = () => {
-        console.log(cellCFlipped);
         if (cellCFlipped == true) {
             reset();
         } else {
@@ -54,7 +53,6 @@ window.onload = () => {
     };
 
     let flipCellD = () => {
-        console.log(cellDFlipped);
         if (cellDFlipped == true) {
             reset();
         } else {
@@ -68,21 +66,10 @@ window.onload = () => {
     };
 
     function reset() {
-        tableCellA.style.transition = `transform .5s`;
-
-        tableCellB.style.transition = `transform .5s`;
-
-        tableCellC.style.transition = `transform .5s`;
-
-        tableCellD.style.transition = `transform .5s`;
-
-        tableCellA.style.transform = `rotate(0deg)`;
-
-        tableCellB.style.transform = `rotate(0deg)`;
-
-        tableCellC.style.transform = `rotate(0deg)`;
-
-        tableCellD.style.transform = `rotate(0deg)`;
+        for (let i = 0; i < cells.length; i++) { 
+            cells[i].style.transition = `transform .5s`;
+            cells[i].style.transform = `rotate(0deg)`;
+        }
         cellAFlipped = false;
         cellBFlipped = false;
         cellCFlipped = false;
@@ -91,12 +78,11 @@ window.onload = () => {
     
     document.getElementById(`reset-bg`).onclick = () => {
         body.style.background = style.getPropertyValue(`--bgcolor`);
+        reset();
     };
 
     tableCellA.addEventListener(`click`, flipCellA);
     tableCellB.addEventListener(`click`, flipCellB);
     tableCellC.addEventListener(`click`, flipCellC);
     tableCellD.addEventListener(`click`, flipCellD);
-
-    
 };
