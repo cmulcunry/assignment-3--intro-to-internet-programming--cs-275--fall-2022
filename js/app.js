@@ -1,25 +1,17 @@
 window.onload = () => {
-    const tdList = document.getElementsByTagName(`td`);
-    for (const cell of tdList) {
-        cell.addEventListener(`click`, function() {
-            for (const cells of tdList) {
+    document.getElementsByTagName(`body`)[0].setAttribute(`id`, `gradient`);
+    const TDLIST = document.getElementsByTagName(`td`);
+    for (const cell of TDLIST) {
+        cell.addEventListener(`click`, () => {
+            for (const cells of TDLIST) {
                 if (cell === cells) {
-                    if (cells.classList.contains(`flipped`)) {
-                        flip(cells);
-                    } else {
-                        cells.classList.remove(`initial`);
+                    if (cells.classList.contains(`flipped`))
+                        cells.classList.remove(`flipped`)
+                    else
                         cells.classList.add(`flipped`);
-                    }
-                } else if (cells.classList.contains(`flipped`)) {
-                    flip(cells);
-                } else {
-                    cells.classList.add(`initial`);
-                }
+                } else if (cells.classList.contains(`flipped`))
+                    cells.classList.remove(`flipped`);
             }
         });
     }
-    let flip = (cell) => {
-        cell.classList.remove(`flipped`);
-        cell.classList.add(`initial`);
-    };
 };
