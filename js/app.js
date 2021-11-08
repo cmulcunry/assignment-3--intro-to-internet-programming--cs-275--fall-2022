@@ -8,15 +8,19 @@ window.onload = () => {
         for (const letters of table) {
             if (letter === letters) {
                 if (letters.classList.contains(`flipped`)) {
-                    letter.classList.remove(`flipped`);
-                    letter.classList.add(`default`);
+                    letters.classList.remove(`flipped`);
+                    letters.classList.add(`default`);
                 }
                 else {
-                    letter.classList.remove(`default`);
-                    letter.classList.add(`flipped`);
+                    letters.classList.remove(`default`);
+                    letters.classList.add(`flipped`);
                 }
             }
+            else if (letters.classList.contains(`flipped`)){
+                letters.classList.remove(`flipped`);
+                letters.classList.add(`default`);
+            }
         }
-     });
+        });
     }
-}
+};
