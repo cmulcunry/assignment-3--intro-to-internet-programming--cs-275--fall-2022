@@ -1,5 +1,6 @@
 
 table {
+  font-size: 70px;
   position:absolute;
   left:20%;
   top:20%;
@@ -15,5 +16,6 @@ td {
  }
 
 table,tr,td {
-  border:1px solid #000;
+  border:1px solid red;
+
 }
