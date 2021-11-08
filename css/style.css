@@ -1,21 +1,22 @@
 table {
+  border-collapse: collapse;
   text-align: center;
   margin: auto;
   margin-top: 100px;
 }
 
 td {
-  font-size: 42px;
   border: 2px solid black;
+  font-size: 42px;
   width: 100px;
 }
 
 .default {
   transform: rotate(0deg);
-  transition: all transform 1s ease;
+  transition: transform 0.5s ease-in-out;
 }
 
 .flipped {
   transform: rotate(180deg);
-  transition: all transform 1s ease;
+  transition: transform 0.5s ease-in-out;
 }
