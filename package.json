@@ -1,5 +1,5 @@
 {
-  "name": "assignment-2--intro-to-internet-programming--cs-275--fall-2021",
+  "name": "assignment-3--intro-to-internet-programming--cs-275--fall-2021",
   "version": "1.0.0",
   "description": "* **Do not start this project until you have read these instructions carefully.**   * **Read these instructions repeatedly until you understand, then begin your project. If something is not clear, ask.**",
   "main": "gulpfile.js",
@@ -20,7 +20,7 @@
   "author": "Rachel Liang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/code-warrior/assignment-3--intro-to-internet-programming--cs-275--fall-2021"
+    "url": "https://github.com/rrliang/assignment-3--intro-to-internet-programming--cs-275--fall-2021"
   },
   "homepage": "https://github.com/code-warrior/assignment-3--intro-to-internet-programming--cs-275--fall-2021#readme",
   "devDependencies": {
