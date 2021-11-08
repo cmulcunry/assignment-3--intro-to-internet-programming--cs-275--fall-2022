@@ -17,5 +17,16 @@ td {
 
 table,tr,td {
   border:1px solid red;
+  animation: linear;
 
 }
+
+.spin {
+  transform: rotate(360deg);
+  transition: transform .3s ease;
+}
+
+
+
+
+
