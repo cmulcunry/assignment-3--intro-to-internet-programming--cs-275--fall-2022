@@ -12,10 +12,10 @@ td {
 
 .default {
   transform: rotate(0deg);
-  transition: transform 1s ease;
+  transition: all transform 1s ease;
 }
 
 .flipped {
   transform: rotate(180deg);
-  transition: transform 1s ease;
+  transition: all transform 1s ease;
 }
