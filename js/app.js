@@ -6,7 +6,7 @@ window.onload = () => {
             for (const cells of TDLIST) {
                 if (cell === cells) {
                     if (cells.classList.contains(`flipped`))
-                        cells.classList.remove(`flipped`)
+                        cells.classList.remove(`flipped`);
                     else
                         cells.classList.add(`flipped`);
                 } else if (cells.classList.contains(`flipped`))

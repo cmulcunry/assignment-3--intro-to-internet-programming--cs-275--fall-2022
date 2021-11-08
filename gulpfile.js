@@ -1,5 +1,5 @@
 const { src, dest, series, watch } = require(`gulp`);
-const gulp = require('gulp');
+const gulp = require(`gulp`);
 const del = require(`del`);
 const babel = require(`gulp-babel`);
 const htmlCompressor = require(`gulp-htmlmin`);
@@ -8,10 +8,27 @@ const cssLinter = require(`gulp-stylelint`);
 const jsLinter = require(`gulp-eslint`);
 const jsCompressor = require(`gulp-uglify`);
 const cssCompressor = require(`gulp-uglifycss`);
-const cache = require(`gulp-cache`);
 const browserSync = require(`browser-sync`);
 const reload = browserSync.reload;
 let browserChoice = `default`;
+
+var paths = {
+    input: `/**`,
+    output: `/**`,
+    js: {
+        input: `js/*.js`,
+        output: `prod/js`,
+        temp: `temp/js`
+    },
+    css: {
+        input: `css/*.css`,
+        output: `prod/css`
+    },
+    html: {
+        input: `*.html`,
+        output: `prod`
+    }
+};
 
 async function safari () {
     browserChoice = `safari`;
@@ -44,51 +61,50 @@ async function allBrowsers () {
 }
 
 let validateHTML = () => {
-    return gulp.src(
-		`html/*.html`)
+    return gulp.src(paths.html.input)
         .pipe(htmlValidator());
 };
 
 let compressHTML = () => {
-    return src([`*.html`])
+    return src(paths.html.input)
         .pipe(htmlCompressor({collapseWhitespace: true}))
-        .pipe(dest(`prod`));
+        .pipe(dest(paths.html.output));
 };
 
 let compressCSS = () => {
-    return src(`css/*.css`)
+    return src(paths.css.input)
         .pipe(cssCompressor())
-        .pipe(dest(`prod/css`));
-}
+        .pipe(dest(paths.css.output));
+};
 
 let transpileJSForDev = () => {
-    return src(`js/*.js`)
+    return src(paths.js.input)
         .pipe(babel())
-        .pipe(dest(`temp/js`));
+        .pipe(dest(paths.js.temp));
 };
 
 let transpileJSForProd = () => {
-    return src(`js/*.js`)
+    return src(paths.js.input)
         .pipe(babel())
         .pipe(jsCompressor())
-        .pipe(dest(`prod/js`));
+        .pipe(dest(paths.js.output));
 };
 
 let lintCSS = () => {
-    return src(`css/*.css`)
+    return src(paths.css.input)
         .pipe(cssLinter(
-          {
-            failAfterError: false,
-            reporters: [
-                {formatter: "string", console: true}
-            ]
-          }
-      ));
+            {
+                failAfterError: false,
+                reporters: [
+                    {formatter: `string`, console: true}
+                ]
+            }
+        ));
 };
 
 let lintJS = () => {
-    return src(`js/*.js`)
-		.pipe(jsLinter())
+    return src(paths.js.input)
+        .pipe(jsLinter())
         .pipe(jsLinter.formatEach(`compact`));
 };
 
@@ -100,7 +116,6 @@ let serve = () => {
         browser: browserChoice,
         server: {
             baseDir: [
-                `temp`,
                 `css`,
                 `./`,
                 `js`
@@ -108,15 +123,15 @@ let serve = () => {
         }
     });
 
-    watch(`js/*.js`,
+    watch(paths.js.input,
         series(lintJS, transpileJSForDev)
     ).on(`change`, reload);
 
-    watch(`css/*.css`,
+    watch(paths.css.input,
         series(lintCSS)
     ).on(`change`, reload);
 
-    watch(`*.html`,
+    watch(paths.html.input,
         series(validateHTML)
     ).on(`change`, reload);
 };
@@ -177,7 +192,7 @@ exports.lintJS = lintJS;
 exports.lintCSS = lintCSS;
 exports.build = series(
     compressCSS,
-	compressHTML,
+    compressHTML,
     transpileJSForProd
 );
 exports.default = series(
@@ -188,3 +203,4 @@ exports.default = series(
     serve
 );
 exports.clean = clean;
+exports.listTasks = listTasks;
