@@ -105,7 +105,7 @@ let serve = () => {
         server: {
             baseDir: [
                 `temp`,
-                `\\`,
+                `./`,
                 `css`,
                 `js`
             ]
