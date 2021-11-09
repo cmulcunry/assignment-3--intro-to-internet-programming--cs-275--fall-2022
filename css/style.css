@@ -13,10 +13,10 @@ td {
 
 .default {
   transform: rotate(0deg);
-  transition: transform 0.5s ease-in-out;
+  transition: transform .5s ease-in-out;
 }
 
 .flipped {
   transform: rotate(180deg);
-  transition: transform 0.5s ease-in-out;
+  transition: transform .5s ease-in-out;
 }
