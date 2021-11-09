@@ -41,7 +41,7 @@ _You may **only** work within the confines of the included scaffold._
 * No CSS or JavaScript libraries may be used.
 
 ## ❖・Due・❖
-Tuesday, 9 November 2021, at 2:00 PM.
+Friday, 12 November 2021, at 10:00 AM.
 
 ## ❖・Grading・❖
 | Item                                                          | Points |
