@@ -52,14 +52,12 @@ async function allBrowsers () {
 }
 
 let validateHTML = () => {
-    return src([
-        `html/*.html`,
-        `html/**/*.html`])
+    return src(`*.html`)
         .pipe(htmlValidator(undefined));
 };
 
 let compressHTML = () => {
-    return src([`html/*.html`,`html/**/*.html`])
+    return src(`*.html`)
         .pipe(htmlCompressor({collapseWhitespace: true}))
         .pipe(dest(`prod`));
 };
