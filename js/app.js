@@ -4,7 +4,7 @@ window.onload = () => {
     const table = document.getElementsByTagName(`td`);
 
     for (const currentLetter of table) {
-        letter.addEventListener(`click`, function() {
+        currentLetter.addEventListener(`click`, function() {
             for (const letters of table) {
                 if (currentLetter === letters) {
                     if (letters.classList.contains(`flipped`)) {
