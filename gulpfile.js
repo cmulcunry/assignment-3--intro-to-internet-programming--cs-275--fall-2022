@@ -100,13 +100,7 @@ let transpileJSForProd = () => {
 
 let copyUnprocessedAssetsForProd = () => {
     return src([
-        `css/*.*`,
-        `js/*.*`,
-        `!html/`,    // but not the HTML folder
-        `!html/*.*`, // or any files in it
-        `!html/**`,  // or any sub folders;
-        `!js/*.js`,  // ignore JS;
-        `!css/**` // and, ignore Sass/CSS.
+        `*.html`,
     ], {dot: true})
         .pipe(dest(`prod`));
 };
