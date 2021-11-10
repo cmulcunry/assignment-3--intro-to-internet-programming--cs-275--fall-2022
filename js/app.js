@@ -1,7 +1,7 @@
 let previousLetter = null;
 
 function rotate(element) {
-    while(previousLetter == null) {
+    while(previousLetter === null) {
         element.classList.remove(`flipped`);
         element.classList.add(`normal`);
         previousLetter = element;
@@ -36,7 +36,7 @@ function rotate(element) {
 
 window.onclick = element => {
     let letterClicked = element.target;
-    if(letterClicked.tagName == `TD`) {
+    if(letterClicked.tagName === `TD`) {
         rotate(letterClicked);
     }
 };
