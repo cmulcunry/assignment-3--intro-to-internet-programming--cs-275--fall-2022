@@ -4,6 +4,7 @@
 !.editorconfig
 !.eslintrc.json
 !.stylelintrc.json
+!.babelrc
 !README.md
 !index.html
 
