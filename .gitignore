@@ -9,6 +9,7 @@
 !package.json
 !package-lock.json
 !gulpfile.js
+!.babelrc
 
 !css/
 !js/
