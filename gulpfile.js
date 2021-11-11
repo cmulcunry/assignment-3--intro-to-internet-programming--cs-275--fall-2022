@@ -52,7 +52,7 @@ async function allBrowsers () {
 }
 
 let validateHTML = () => {
-    return src([`html/*.html`, `html/**/*.html`]).pipe(htmlValidator());
+    return src([`./*.html`, `html/**/*.html`]).pipe(htmlValidator());
 };
 
 let compressHTML = () => {
