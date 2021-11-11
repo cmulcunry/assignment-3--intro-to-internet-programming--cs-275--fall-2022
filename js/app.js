@@ -1,11 +1,16 @@
 window.onload = () => {
-    //Decided to use classList to determine the state of the letters. Info from here:
+    //classList to determine the state of the letters. Info from here:
     //https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
-    const table = document.querySelectorAll(`td`);
 
-    for (const currentLetter of table) {
-        currentLetter.addEventListener(`click`, () => {
-            for (const letters of table) {
+    let table = document.querySelectorAll(`td`);
+
+    //for...in to iterate logic over each individual element in the table,
+    //without having to convert table to an array. Info from here:
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/
+    //Statements/for...in
+    for (let currentLetter in table) {
+        for (let letters in table) {
+            currentLetter.addEventListener(`click`, () => {
                 if (currentLetter === letters) {
                     if (letters.classList.contains(`flipped`)) {
                         letters.classList.remove(`flipped`);
@@ -20,7 +25,8 @@ window.onload = () => {
                     letters.classList.remove(`flipped`);
                     letters.classList.add(`default`);
                 }
-            }
-        });
+            });
+        }
+
     }
 };

@@ -102,18 +102,6 @@ let serve = () => {
     ).on(`change`, reload);
 };
 
-let copyUnprocessedAssetsForProd = () => {
-    return src([
-      `dev/*.*`,       // Source all files,
-      `dev/**`,        // and all folders,
-      `!dev/html/`,    // but not the HTML folder
-      `!dev/html/*.*`, // or any files in it
-      `!dev/html/**`,  // or any sub folders;
-      `!dev/**/*.js`,  // ignore JS;
-      `!dev/css/**` // and, ignore Sass/CSS.
-    ], {dot: true}).pipe(dest(`prod`));
-};
-
 exports.validateHTML = validateHTML;
 exports.compressHTML = compressHTML;
 exports.HTMLProcessing = series(validateHTML, compressHTML);
