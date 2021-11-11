@@ -1,6 +1,4 @@
-
 table {
-  font-size: 20px;
   position:absolute;
   left:20%;
   top:20%;
@@ -13,6 +11,7 @@ table {
 td {
   padding:15px 20px;
   text-align: center;
+
  }
 
 tr,td {
@@ -20,8 +19,8 @@ tr,td {
 }
 
 .spin {
-  transform: rotate(360deg);
-  transition: transform .3s;
+  transform: rotate(180deg);
+  transition: transform .7s;
 }
 
 
