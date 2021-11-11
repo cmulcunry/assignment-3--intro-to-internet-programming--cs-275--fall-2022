@@ -17,6 +17,7 @@ table {
   margin-top: 30%;
   font-size: 60px;
   border-collapse: collapse;
+  overflow: hidden;
 }
 
 td {
