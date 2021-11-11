@@ -1,5 +1,6 @@
 window.onload = () => {
     const letter = document.querySelectorAll(`td`);
+    let pointer;
 
     function animation() {
         if (letter[0].classList.contains(`animation`)) {
