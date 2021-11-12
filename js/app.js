@@ -3,30 +3,35 @@ let flippedLetter = 0;
 let tempLetter = 0;
 let rotationTimer;
 let angle = 0;
+let canClick = true;
 
 letters.forEach(letter => {
     letter.addEventListener(`click`, () => {
-        angle = 0;
-        clearInterval(rotationTimer);
-        rotationTimer = setInterval(rotate, 3);
-        if(flippedLetter !== letter) {
-            //letter.style.transform = `rotate(180deg)`;
-            tempLetter = flippedLetter;
-            letter.style.color = `blue`;
-            flippedLetter = letter;
+        if(canClick) {
+            canClick = false;
+            angle = 0;
+            clearInterval(rotationTimer);
+            rotationTimer = setInterval(rotate, 3);
+            if(flippedLetter !== letter) {
+                //letter.style.transform = `rotate(180deg)`;
+                tempLetter = flippedLetter;
+                letter.style.color = `blue`;
+                flippedLetter = letter;
+            }
+            else {
+                //letter.style.transform = `rotate(0deg)`;
+                //letter.style.color = `black`;
+                tempLetter = letter;
+                flippedLetter = 0;
+            }
+            tempLetter.style.color = `black`;
         }
-        else {
-            //letter.style.transform = `rotate(0deg)`;
-            //letter.style.color = `black`;
-            tempLetter = letter;
-            flippedLetter = 0;
-        }
-        tempLetter.style.color = `black`;
     });
 });
 
 function rotate() {
     if(180 === angle){
+        canClick = true;
         angle = 0;
         clearInterval(rotationTimer);
     }
