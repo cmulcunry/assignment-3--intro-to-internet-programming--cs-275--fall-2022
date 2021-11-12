@@ -5,6 +5,7 @@ let rotationTimer;
 let angle = 0;
 let canClick = true;
 
+// the forEach method was found from https://developer.mozilla.org
 letters.forEach(letter => {
     letter.addEventListener(`click`, () => {
         if(canClick) {
