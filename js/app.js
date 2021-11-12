@@ -1,9 +1,5 @@
-let letter =null;
-
 function rotate(element){
-    while(letter==null){
-        element.classList.remove( `spin`);
-
+    while(letter==null){element.classList.remove( `spin`);
         letter=element;
     }
     if( element===letter){
