@@ -8,7 +8,7 @@ const jsLinter = require(`gulp-eslint`);
 const jsCompressor = require(`gulp-uglify`);
 const cache = require(`gulp-cache`);
 const browserSync = require(`browser-sync`);
-const uglifycss = require('uglifycss');
+const uglifyCss = require('gulp-uglifycss');
 const reload = browserSync.reload;
 let browserChoice = `default`;
 
@@ -69,7 +69,7 @@ let transpileJSForProd = () => {
 
 let cssCompressor = () => {
     return src(`css/*.css`)
-        .pipe(uglifycss())
+        .pipe(uglifyCss())
         .pipe(dest(`prod/css`));
 };
 
