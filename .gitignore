@@ -1,12 +1,12 @@
 *
 
-!.gitignore
-!.package.lock.json
-!.editorconfig
-!.eslintrc.json
-!.stylelintrc.json
+!package.lock.json
+!package.json
+!gulpfile.js
+
+
 !README.md
 !index.html
-node_modules
+
 !css/
 !js/
