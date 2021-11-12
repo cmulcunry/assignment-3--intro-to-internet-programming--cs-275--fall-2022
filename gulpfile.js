@@ -12,7 +12,7 @@ const browserSync = require(`browser-sync`);
 const reload = browserSync.reload;
 let browserChoice = `default`;
 
-var paths = {
+let paths = {
     input: `/**`,
     output: `/**`,
     js: {
