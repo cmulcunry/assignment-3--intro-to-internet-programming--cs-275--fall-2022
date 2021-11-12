@@ -149,9 +149,9 @@ exports.compressCSS = compressCSS;
 exports.lintJS = lintJS;
 exports.lintCSS = lintCSS;
 exports.build = series(
+    compressCSS,
     compressHTML,
-    transpileJSForProd,
-    compressCSS
+    transpileJSForProd
 );
 
 exports.default = series(lintJS, transpileJSForDev, validateHTML, lintCSS, serve);
