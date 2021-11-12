@@ -1,13 +1,13 @@
 window.onload = () => {
-    for (let cell of document.querySelectorAll(`td`).values()) {
-        cell.addEventListener(`click`, () => {
-            if (cell.classList.contains(`rotated`)) {
-                cell.classList.remove(`rotated`);
+    for (let thisCell of document.querySelectorAll(`td`).values()) {
+        thisCell.addEventListener(`click`, () => {
+            if (thisCell.classList.contains(`rotated`)) {
+                thisCell.classList.remove(`rotated`);
             } else {
                 for (let someCell of document.querySelectorAll(`td`).values()) {
                     someCell.classList.remove(`rotated`);
                 }
-                cell.classList.add(`rotated`);
+                thisCell.classList.add(`rotated`);
             }
         });
     }
