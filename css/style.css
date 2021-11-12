@@ -1,0 +1,23 @@
+table {
+  width: 400px;
+  height: 100px;
+}
+
+td {
+  text-align: center;
+  color: #000000;
+}
+
+table, td {
+  border: 1px solid #000000;
+  background-color: #B9ECBE;
+  border-collapse: collapse;
+}
+
+body {
+  background-color: #EAE5E5;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
