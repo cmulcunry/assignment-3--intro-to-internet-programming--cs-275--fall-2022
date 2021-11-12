@@ -84,7 +84,6 @@ let dev = () => {
         browser: browserChoice,
         server: {
             baseDir: [
-                `temp`,
                 `./`
             ]
         }
