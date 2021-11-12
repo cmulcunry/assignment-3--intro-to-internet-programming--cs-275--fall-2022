@@ -18,6 +18,12 @@ body {
   background-color: #EAE5E5;
 }
 
-.rotate {
+.flipped {
   transform: rotate(180deg);
+  transition: transform 1s ease;
+}
+
+.ReturnNormal {
+  transform: rotate(0deg);
+  transition: transform 1s ease;
 }
