@@ -2,24 +2,24 @@ window.onload = () => {
     const tablelist = document.getElementsByTagName(`td`);
     for (const currentLetter of tablelist) {
         currentLetter.addEventListener(`click`, function() {
-            for (const cells of tablelist) {
-                if (currentLetter === cells) {
-                    if (cells.classList.contains(`flipped`)) {
-                        flip(cells);
+            for (const cell of tablelist) {
+                if (currentLetter === cell) {
+                    if (cell.classList.contains(`flipped`)) {
+                        flip(cell);
                     } else {
-                        cells.classList.remove(`initial`);
-                        cells.classList.add(`flipped`);
+                        cell.classList.remove(`initial`);
+                        cell.classList.add(`flipped`);
                     }
-                } else if (cells.classList.contains(`flipped`)) {
-                    flip(cells);
+                } else if (cell.classList.contains(`flipped`)) {
+                    flip(cell);
                 } else {
-                    cells.classList.add(`initial`);
+                    cell.classList.add(`initial`);
                 }
             }
         });
     }
-    let flip = (cell) => {
-        cell.classList.remove(`flipped`);
-        cell.classList.add(`initial`);
+    let flip = (currentLetter) => {
+        currentLetter.classList.remove(`flipped`);
+        currentLetter.classList.add(`initial`);
     };
 };
