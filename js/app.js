@@ -6,8 +6,8 @@ window.onload = () => {
         }
     };
     for (let i = 0; i < letters.length; i++) {
-        letters[i].onclick = function () { //
-            if(letters[i].classList.contains(`rotate`)){ //
+        letters[i].onclick = function () {
+            if(letters[i].classList.contains(`rotate`)){
                 letters[i].classList.remove(`rotate`);
             }
             else {
