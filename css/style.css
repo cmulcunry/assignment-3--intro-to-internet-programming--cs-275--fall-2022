@@ -1,31 +1,35 @@
 body{
 
   background-color: beige;
+  background-blend-mode: hue;
 }
 
 table {
-  position:absolute;
+  position: absolute;
   left:40%;
   right: 50%;
   top:45%;
   width:30%;
   border-spacing: 2px;
+  border-collapse: collapse;
   border-radius: 12px 12px 0 0;
   box-shadow: 0 2px 15px rgba(64,64,64,.7);
- }
-
-td {
-  padding:12px 15px;
   text-align: center;
-
+  font-size: 30px;
  }
 
 tr,td {
   border:3px solid red;
   background-color: coral;
+  padding:12px 15px;
 }
 
-.spin {
+td:hover {
+  cursor: pointer;
+  position: relative;
+}
+
+.flipped {
   transform: rotate(180deg);
   transition: transform .7s;
 }
