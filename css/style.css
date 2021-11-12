@@ -2,7 +2,6 @@
 tried to put the light/dark color variables into their own file,
 but it didn't work, so i had to leave them here instead :(
 */
-
 @media (prefers-color-scheme: dark) {
   :root {
     --tablecolor: rgb(255, 100, 100);
@@ -10,7 +9,7 @@ but it didn't work, so i had to leave them here instead :(
     --textcolor: rgb(255, 255, 255);
     --cellAColor: rgb(255, 162, 162);
     --cellBColor: rgb(217, 255, 112);
-    --cellCColor: rgb(100, 115, 255);
+    --cellCColor: rgb(88, 102, 226);
     --cellDColor: rgb(0, 158, 105);
   }
 }
@@ -20,9 +19,9 @@ but it didn't work, so i had to leave them here instead :(
     --tablecolor: rgb(207, 47, 47);
     --bgcolor: rgb(255, 255, 255);
     --textcolor: rgb(0, 0, 0);
-    --cellAColor: rgb(255, 53, 53);
-    --cellBColor: rgb(187, 255, 0);
-    --cellCColor: rgb(0, 26, 255);
+    --cellAColor: rgb(255, 78, 78);
+    --cellBColor: rgb(221, 250, 90);
+    --cellCColor: rgb(73, 91, 255);
     --cellDColor: rgb(0, 216, 144);
   }
 }

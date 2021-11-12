@@ -49,7 +49,7 @@ let validateHTML = () => {
 };
 
 let compressHTML = () => {
-    return src([`./*.html`,`html/**/*.html`])
+    return src([`./*.html`])
         .pipe(htmlCompressor({collapseWhitespace: true}))
         .pipe(dest(`prod`));
 };
@@ -99,18 +99,13 @@ let serve = () => {
         browser: browserChoice,
         server: {
             baseDir: [
-                `temp`,
                 `css`,
-                `html`,
+                `js`,
                 `./`
                 ]
             }
         }
     );
-    
-    watch(`./.html`,
-    series(htmlCompressor)
-).on(`change`, reload);
 
     watch(`js/*.js`,
         series(lintJS, transpileJSForDev)
