@@ -57,7 +57,7 @@ let compressHTML = () => {
 let compressCSS = () => {
     return src(`css/*.css`)
         .pipe(cssCompressor())
-        .pipe(dest(`prod`));
+        .pipe(dest(`prod/css`));
 }
 
 let transpileJSForDev = () => {
@@ -70,7 +70,7 @@ let transpileJSForProd = () => {
     return src(`js/*.js`)
         .pipe(babel())
         .pipe(jsCompressor())
-        .pipe(dest(`prod`));
+        .pipe(dest(`prod/js`));
 };
 
 let lintCSS = () => {
@@ -176,7 +176,7 @@ exports.lintJS = lintJS;
 exports.lintCSS = lintCSS;
 exports.build = series(
     compressCSS,
-	compressHTML,
+    compressHTML,
     transpileJSForProd
 );
 exports.dev = series(lintJS, lintCSS, validateHTML, transpileJSForDev, serve
