@@ -17,9 +17,11 @@ body {
   position: absolute;
 }
 
+/*Dynamic gradient background*/
+/*https://stackoverflow.com/questions/23441060/animating-linear-gradient-using-css*/
 #gradient {
   color: white;
-  --overlay-color-1: #f00;
+  --overlay-color-1: #f09;
   --overlay-color-2: #00f;
   --anim-duration: 20s;
   opacity: .8;
@@ -77,23 +79,8 @@ td {
   transform: rotate(0deg);
 }
 
-td:nth-child(1).flipped {
-  color: #9fbdfc;
-}
-
-td:nth-child(2).flipped {
-  color: #aa9ffc;
-}
-
-td:nth-child(3).flipped {
-  color: #db9ffc;
-}
-
-td:nth-child(4).flipped {
-  color: #fc9fe5;
-}
-
 .flipped {
+  color: #9fbdfc;
   transition: all .5s ease-in-out;
   transform: rotate(180deg);
 }
