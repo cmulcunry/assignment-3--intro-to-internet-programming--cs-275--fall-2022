@@ -7,7 +7,7 @@ var body = document.body;
 var style = getComputedStyle(document.body);
 
 window.onload = () => {
-    let resetButton = document.getElementById("reset-bg");
+    let resetButton = document.getElementById(`reset-bg`);
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener(`click`, flipCell, false);
     }
@@ -46,7 +46,7 @@ function reset() {
 }
 
 document.getElementById(`reset-bg`).onclick = () => {
-    var style = getComputedStyle(document.body);
-    body.style.background = style.getPropertyValue(`--bgcolor`);
+    var style = getComputedStyle(document.body);  
+    body.style.background = style.getPropertyValue(`--bgcolor`);  
     reset();
 };
