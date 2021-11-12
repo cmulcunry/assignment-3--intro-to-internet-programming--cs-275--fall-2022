@@ -13,14 +13,11 @@ letters.forEach(letter => {
             clearInterval(rotationTimer);
             rotationTimer = setInterval(rotate, 3);
             if(flippedLetter !== letter) {
-                //letter.style.transform = `rotate(180deg)`;
                 tempLetter = flippedLetter;
                 letter.style.color = `blue`;
                 flippedLetter = letter;
             }
             else {
-                //letter.style.transform = `rotate(0deg)`;
-                //letter.style.color = `black`;
                 tempLetter = letter;
                 flippedLetter = 0;
             }
