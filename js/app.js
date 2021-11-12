@@ -5,12 +5,16 @@ window.onload = () => {
         cell.addEventListener(`click`, () => {
             for (const cells of TDLIST) {
                 if (cell === cells) {
-                    if (cells.classList.contains(`flipped`))
+                    if (cells.classList.contains(`flipped`)) {
                         cells.classList.remove(`flipped`);
-                    else
+                    } else {
                         cells.classList.add(`flipped`);
-                } else if (cells.classList.contains(`flipped`))
-                    cells.classList.remove(`flipped`);
+                    }
+                } else {
+                    if (cells.classList.contains(`flipped`)) {
+                        cells.classList.remove(`flippedd`);
+                    }
+                } 
             }
         });
     }
