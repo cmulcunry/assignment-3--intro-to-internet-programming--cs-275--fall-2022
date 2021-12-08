@@ -1,0 +1,43 @@
+body {
+  background-color: white;
+  font-size: 50px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+table,
+td {
+  border: 1px solid red;
+  border-collapse: collapse;
+  padding: 50px;
+}
+
+td {
+  transform: rotate(0deg);
+  transition: all .5s ease-out;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+table {
+  margin: 0 auto;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  color: blue;
+  transition: all .5s ease-out;
+}
+
+/**
+References:
+transform - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
+border collapse - https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse
+ease-out Transition - https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+**/
