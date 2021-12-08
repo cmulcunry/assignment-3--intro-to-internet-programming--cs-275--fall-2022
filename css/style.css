@@ -1,0 +1,37 @@
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  color: #fff;
+  background: #191970;
+}
+
+table {
+  background-color: #292325;
+  border-collapse: collapse;
+  font-size: 5rem;
+}
+
+td {
+  padding: 30px;
+}
+
+table td {
+  border: 5px double #e30022;
+}
+
+.initial {
+  transition: all .4s ease-in-out;
+  transform: rotate(0deg);
+}
+
+.flipped {
+  transition: all .4s ease-in-out;
+  transform: rotate(180deg);
+  color: #fff000;
+}
