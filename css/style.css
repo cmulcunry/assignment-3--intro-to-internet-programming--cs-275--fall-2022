@@ -1,0 +1,82 @@
+/*
+tried to put the light/dark color variables into their own file,
+but it didn't work, so i had to leave them here instead :(
+*/
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tablecolor: rgb(255, 100, 100);
+    --bgcolor: rgb(0, 0, 0);
+    --textcolor: rgb(255, 255, 255);
+    --cellAColor: rgb(255, 162, 162);
+    --cellBColor: rgb(215, 255, 107);
+    --cellCColor: rgb(88, 102, 226);
+    --cellDColor: rgb(0, 158, 105);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --tablecolor: rgb(207, 47, 47);
+    --bgcolor: rgb(255, 255, 255);
+    --textcolor: rgb(0, 0, 0);
+    --cellAColor: rgb(255, 78, 78);
+    --cellBColor: rgb(221, 250, 90);
+    --cellCColor: rgb(73, 91, 255);
+    --cellDColor: rgb(0, 216, 144);
+  }
+}
+
+body {
+  background-color: var(--bgcolor);
+}
+
+table {
+  justify-content: center;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 5px solid  var(--tablecolor);
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  color: var(--textcolor);
+  font-size: 50px;
+  -o-transition: color .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+body {
+  justify-content: center;
+  font-family: arial, sans-serif;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+td:nth-child(1):hover {
+  background-color: var(--cellAColor);
+}
+
+td:nth-child(2):hover {
+  background-color: var(--cellBColor);
+}
+
+td:nth-child(3):hover {
+  background-color: var(--cellCColor);
+}
+
+td:nth-child(4):hover {
+  background-color: var(--cellDColor);
+}
