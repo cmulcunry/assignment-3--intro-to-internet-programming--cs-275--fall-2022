@@ -1,0 +1,38 @@
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  background: black;
+  color: white;
+}
+
+table {
+  text-align: center;
+  margin: auto;
+  margin-top: 30%;
+  font-size: 60px;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+td {
+  user-select: none;
+  border: 4px solid red;
+  width: 70px;
+  height: 70px;
+  transform: rotate(0deg);
+  transition: all .5s ease-in-out;
+  background-color: black;
+}
+
+.flipped {
+  transform: rotate(180deg);
+  transition: all .5s ease-in-out;
+  background-color: white;
+  color: black;
+}

@@ -4,8 +4,12 @@
 !.editorconfig
 !.eslintrc.json
 !.stylelintrc.json
+!.babelrc
+!package.json
+!package-lock.json
 !README.md
 !index.html
+!gulpfile.js
 
 !css/
 !js/
