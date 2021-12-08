@@ -1,0 +1,15 @@
+body {
+  font-size: 64px;
+}
+
+table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+tbody td {
+  border: solid;
+  border-color: red;
+  padding: 32px;
+}
