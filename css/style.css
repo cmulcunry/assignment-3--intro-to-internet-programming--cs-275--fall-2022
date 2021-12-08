@@ -1,0 +1,22 @@
+table {
+  border-collapse: collapse;
+  text-align: center;
+  margin: auto;
+  margin-top: 100px;
+}
+
+td {
+  border: 2px solid black;
+  font-size: 42px;
+  width: 100px;
+}
+
+.default {
+  transform: rotate(0deg);
+  transition: transform .5s ease-in-out;
+}
+
+.flipped {
+  transform: rotate(180deg);
+  transition: transform .5s ease-in-out;
+}
