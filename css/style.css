@@ -1,0 +1,29 @@
+table {
+    margin-top: 20%;
+    margin-right: 30%;
+    margin-left: 30%;
+    border-collapse: collapse;
+    width: 25%;
+}
+
+td {
+    border: 2px solid rgb(255, 3, 3);
+    padding: 50px;
+    text-align: center;
+    font-size: 30px;
+    transition: transform 500ms;
+    transform-style: flat;
+    cursor: pointer;
+    position: relative;
+    perspective: 600px;
+}
+
+.rotation {
+    transform: rotate(180deg);
+    transition: transform .5s ease;
+  }
+
+.returnbacktonormal {
+    transform: rotate(0deg);
+    transition: transform .5s ease;
+  }
