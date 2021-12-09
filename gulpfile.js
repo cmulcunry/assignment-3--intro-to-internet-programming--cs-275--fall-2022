@@ -110,6 +110,5 @@ exports.lintCSS = lintCSS;
 exports.transpileJSForDev = transpileJSForDev
 exports.transpileJSForProd = transpileJSForProd;
 exports.compileCSSForProd = compileCSSForProd;
-exports.copyUnprocessedAssetsForProd = copyUnprocessedAssetsForProd;
 exports.dev = series(lintCSS, lintJS, transpileJSForDev, validateHTML, serve);
-exports.build = series(compressHTML, transpileJSForProd, compileCSSForProd, copyUnprocessedAssetsForProd);
+exports.build = series(compressHTML, transpileJSForProd, compileCSSForProd);
